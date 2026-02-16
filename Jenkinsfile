@@ -18,11 +18,6 @@ pipeline {
         )
     }
 
-    environment {
-        HEADLESS = "${params.HEADLESS != null ? params.HEADLESS : true}"
-        TAG = "${params.TAG ?: ''}"
-    }
-
     stages {
         stage('Install Dependencies') {
             steps {
@@ -33,7 +28,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                echo "Running WDIO tests - Headless: ${HEADLESS}, Tag: ${TAG}"
+                echo 'Running WDIO tests...'
                 bat 'npm test'
             }
         }
