@@ -27,4 +27,6 @@ Then(/^I should see the "([^"]*)" message$/, async (expectedMessage: string) => 
 
     // Flash message includes a close button "x" at the end, so use toContain
     expect(actualMessage).toContain(expectedMessage);
+
+    console.log('Maruti and Deepa is here');
 });

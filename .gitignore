@@ -1,7 +1,5 @@
 node_modules/
 .tmp/
-logs/
-*.log
 .DS_Store
 Thumbs.db
-.env
+package-lock.json
