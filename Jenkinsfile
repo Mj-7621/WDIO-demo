@@ -19,8 +19,8 @@ pipeline {
     }
 
     environment {
-        HEADLESS = "${params.HEADLESS}"
-        TAG = "${params.TAG}"
+        HEADLESS = "${params.HEADLESS != null ? params.HEADLESS : true}"
+        TAG = "${params.TAG ?: ''}"
     }
 
     stages {
