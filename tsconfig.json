@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "sourceMap": false,
+        "noEmit": true,
+        "baseUrl": ".",
+        "types": [
+            "node",
+            "@wdio/globals/types",
+            "@wdio/cucumber-framework"
+        ]
+    },
+    "include": [
+        "wdio.conf.ts",
+        "tests/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
