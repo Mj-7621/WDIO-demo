@@ -37,9 +37,7 @@ pipeline {
             steps {
                 echo 'Publishing Cucumber HTML Report...'
                 publishHTML(target: [
-                    allowMissing: false,
                     alwaysLinkToLastBuild: true,
-                    keepAll: true,
                     reportDir: '.tmp/report',
                     reportFiles: 'index.html',
                     reportName: 'Cucumber Test Report',
