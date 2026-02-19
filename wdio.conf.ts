@@ -1,8 +1,13 @@
 import type { Options } from '@wdio/types';
 import { join } from 'path';
 import { existsSync, rmSync, mkdirSync } from 'fs';
+import os from 'os';
 
 const isHeadless = process.env.HEADLESS !== 'false';
+
+const platformName = os.platform() === 'win32' ? 'Windows' : os.platform() === 'darwin' ? 'macOS' : 'Linux';
+const platformVersion = os.release();
+const deviceName = os.hostname();
 
 export const config: Options.Testrunner = {
     runner: 'local',
@@ -30,7 +35,14 @@ export const config: Options.Testrunner = {
                     ...(isHeadless ? ['--headless=new'] : []),
                 ],
             },
-        },
+            'cjson:metadata': {
+                device: deviceName,
+                platform: {
+                    name: platformName,
+                    version: platformVersion,
+                },
+            },
+        } as WebdriverIO.Capabilities,
         {
             browserName: 'firefox',
             'moz:firefoxOptions': {
@@ -38,7 +50,14 @@ export const config: Options.Testrunner = {
                     ...(isHeadless ? ['-headless'] : []),
                 ],
             },
-        },
+            'cjson:metadata': {
+                device: deviceName,
+                platform: {
+                    name: platformName,
+                    version: platformVersion,
+                },
+            },
+        } as WebdriverIO.Capabilities,
     ],
 
     logLevel: 'info',
