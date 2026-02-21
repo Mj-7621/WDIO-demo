@@ -1,7 +1,7 @@
 class SecurePage {
 
     get #flashMessage() {
-        return $('#flash'); 
+        return $('#flash');
     }
 
     get #btnLogout() {
