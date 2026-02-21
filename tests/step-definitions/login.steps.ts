@@ -25,7 +25,6 @@ Then(/^I should see the "([^"]*)" message$/, async (expectedMessage: string) => 
         actualMessage = await loginPage.getFlashMessageText();
     }
 
-    // Flash message includes a close button "x" at the end, so use toContain
     expect(actualMessage).toContain(expectedMessage);
 
     console.log('Deepa is here');
