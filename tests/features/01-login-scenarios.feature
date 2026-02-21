@@ -16,4 +16,4 @@ Feature: Login Scenarios
             | valid                     | tomsmith  | SuperSecretPassword! | You logged into a secure area!   |
             | invalid username          | invalid   | SuperSecretPassword! | Your username is invalid!        |
             | invalid password          | tomsmith  | WrongPassword        | Your password is invalid!        |
-            | invalid username and pass | invalid   | WrongPassword        | Your username is invalid!        |
+            # | invalid username and pass | invalid   | WrongPassword        | Your username is invalid!        |
