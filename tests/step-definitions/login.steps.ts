@@ -26,6 +26,4 @@ Then(/^I should see the "([^"]*)" message$/, async (expectedMessage: string) => 
     }
 
     expect(actualMessage).toContain(expectedMessage);
-
-    console.log('Maruti & Deepa is here');
 });

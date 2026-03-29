@@ -4,7 +4,10 @@
     "description": "WebDriverIO Demo - Login Automation with Cucumber BDD",
     "private": true,
     "scripts": {
-        "test": "wdio run wdio.conf.ts"
+        "test": "wdio run wdio.conf.ts",
+        "test:chrome": "BROWSER=chrome wdio run wdio.conf.ts",
+        "test:firefox": "BROWSER=firefox wdio run wdio.conf.ts",
+        "test:headed": "HEADLESS=false wdio run wdio.conf.ts"
     },
     "devDependencies": {
         "@cucumber/cucumber": "^9.5.1",

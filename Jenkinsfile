@@ -29,7 +29,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo 'Running WDIO tests...'
-                bat 'npm test'
+                bat "set HEADLESS=${params.HEADLESS}&& set TAG=${params.TAG}&& npm test"
             }
         }
 
