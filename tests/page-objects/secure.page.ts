@@ -16,6 +16,7 @@ class SecurePage {
     async clickLogout(): Promise<void> {
         await (await this.#btnLogout).waitForClickable();
         await (await this.#btnLogout).click();
+        console.log("We are in the Demo");
     }
 }
 
