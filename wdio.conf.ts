@@ -43,21 +43,21 @@ export const config: Options.Testrunner = {
                 },
             },
         } as WebdriverIO.Capabilities,
-        {
-            browserName: 'firefox',
-            'moz:firefoxOptions': {
-                args: [
-                    ...(isHeadless ? ['-headless'] : []),
-                ],
-            },
-            'cjson:metadata': {
-                device: deviceName,
-                platform: {
-                    name: platformName,
-                    version: platformVersion,
-                },
-            },
-        } as WebdriverIO.Capabilities,
+        // {
+        //     browserName: 'firefox',
+        //     'moz:firefoxOptions': {
+        //         args: [
+        //             ...(isHeadless ? ['-headless'] : []),
+        //         ],
+        //     },
+        //     'cjson:metadata': {
+        //         device: deviceName,
+        //         platform: {
+        //             name: platformName,
+        //             version: platformVersion,
+        //         },
+        //     },
+        // } as WebdriverIO.Capabilities,
     ],
 
     logLevel: 'info',

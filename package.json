@@ -4,10 +4,10 @@
     "description": "WebDriverIO Demo - Login Automation with Cucumber BDD",
     "private": true,
     "scripts": {
-        "test": "wdio run wdio.conf.ts",
-        "test:chrome": "BROWSER=chrome wdio run wdio.conf.ts",
-        "test:firefox": "BROWSER=firefox wdio run wdio.conf.ts",
-        "test:headed": "HEADLESS=false wdio run wdio.conf.ts"
+        "test": "cross-env NODE_OPTIONS=--no-experimental-require-module wdio run wdio.conf.ts",
+        "test:chrome": "cross-env BROWSER=chrome NODE_OPTIONS=--no-experimental-require-module wdio run wdio.conf.ts",
+        "test:firefox": "cross-env BROWSER=firefox NODE_OPTIONS=--no-experimental-require-module wdio run wdio.conf.ts",
+        "test:headed": "cross-env HEADLESS=false NODE_OPTIONS=--no-experimental-require-module wdio run wdio.conf.ts"
     },
     "devDependencies": {
         "@cucumber/cucumber": "^9.5.1",
@@ -16,6 +16,7 @@
         "@wdio/local-runner": "^8.36.0",
         "@wdio/spec-reporter": "^8.36.0",
         "@wdio/types": "^8.36.0",
+        "cross-env": "^10.1.0",
         "multiple-cucumber-html-reporter": "^3.6.2",
         "ts-node": "^10.9.2",
         "typescript": "^5.4.0",
